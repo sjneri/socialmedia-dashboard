@@ -14,6 +14,7 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
+  - [Author](#author)
 
 ## Overview
 
@@ -23,13 +24,17 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
 
 ### Screenshot
 #### Desktop
-![Social Media Dashboard -- Dekstop](./screenshot/social-media__desktop--dark.png) | ![Social Media Dashboard -- Dekstop](./screenshot/social-media__desktop--dark.png)
+| Dark     | Light     |
+|------------|-------------|
+| ![Social Media Dashboard -- Desktop](./screenshot/social-media__desktop--dark.png) | ![Social Media Dashboard -- Desktop](./screenshot/social-media__desktop--light.png) |
 #### Mobile
-![Social Media Dashboard -- Mobile](./screenshot/social-media__mobile--dark.png)
+| Dark     | Light     |
+|------------|-------------|
+| ![Social Media Dashboard -- Mobile](./screenshot/social-media__mobile--dark.png) | ![Social Media Dashboard -- Mobile](./screenshot/social-media__mobile--light.png) |
 
 ### Links
 
-- Solution URL: [https://sjneri.github.io/socialmedia-dashboard/](https://sjneri.github.io/socialmedia-dashboard/)
+- Solution URL: [https://github.com/sjneri/socialmedia-dashboard](https://github.com/sjneri/socialmedia-dashboard)
 - Live Site URL: [https://sjneri.github.io/socialmedia-dashboard/](https://sjneri.github.io/socialmedia-dashboard/)
 
 ## My process
@@ -45,3 +50,8 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
 
 - Native CSS Variables
 - Custom Switch using Checkbox
+
+## Author
+Stephen John Neri
+- [Github](https://github.com/sjneri)
+- [LinkedIn](https://www.linkedin.com/in/stephenjohnneri/)

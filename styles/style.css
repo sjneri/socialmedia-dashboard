@@ -80,13 +80,35 @@ body[data-theme="light"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 100%;
+  gap: 2rem;
+}
+
+#header .header {
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--cp-subtitle);
+}
+
+@media (min-width: 600px) {
+  #header {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  #header .header {
+    border-bottom: unset;
+  }
 }
 
 .header__title {
@@ -105,7 +127,23 @@ body[data-theme="light"] {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .toggle {
+    -webkit-box-pack: unset;
+        -ms-flex-pack: unset;
+            justify-content: unset;
+  }
+}
+
+.toggle__title {
+  font-weight: 700;
+  color: var(--cp-subtitle);
 }
 
 .toggle__switch {
@@ -119,17 +157,6 @@ body[data-theme="light"] {
   background: var(--cp-theme);
   margin-left: 1.2rem;
   -webkit-tap-highlight-color: transparent;
-}
-
-.toggle__switch::before {
-  content: "Dark mode";
-  position: absolute;
-  left: -90px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  font-weight: 700;
-  color: var(--cp-subtitle);
 }
 
 .toggle__switch:hover {
@@ -165,7 +192,7 @@ body[data-theme="light"] {
   display: -ms-flexbox;
   display: flex;
   gap: 2rem;
-  margin: 4rem 0;
+  margin: 3rem 0;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -173,6 +200,7 @@ body[data-theme="light"] {
 @media (min-width: 600px) {
   #social {
     gap: 3rem;
+    margin: 4rem 0;
   }
 }
 
