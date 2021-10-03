@@ -36,10 +36,6 @@ $font-sm: 1.2rem;
 
 html {
   font-size: 62.5%;
-
-  @media only screen and (max-width: 40rem) {
-    font-size: 50%;
-  }
 }
 
 body {
@@ -47,7 +43,6 @@ body {
   font-size: $font-md;
   font-weight: 400;
   box-sizing: border-box;
-  height: 100vh;
 
   line-height: 1.4;
   letter-spacing: 0.5px;
@@ -70,16 +65,25 @@ body {
     --cp-theme: hsl(230, 22%, 74%);
   }
 
+  // background: var(--cp-mainBg);
+  background: linear-gradient(to bottom, var(--cp-topBg) 10%, var(--cp-mainBg) 10%, var(--cp-mainBg) 100%);
   color: var(--cp-title);
+
+  @media (min-width: 768px) {
+    background: linear-gradient(to bottom, var(--cp-topBg) 30%, var(--cp-mainBg) 30%, var(--cp-mainBg) 100%);
+  }
 }
 
 .container {
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  padding: 5rem 15rem;
+  padding: 2rem;
 
-  background: var(--cp-mainBg);
+  @media (min-width: 768px) {
+    padding: 4rem 10rem;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 4rem 15rem;
+  }
 }
 #header {
   display: flex;
@@ -159,15 +163,24 @@ body {
 
 #social {
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   margin: 4rem 0;
+  flex-wrap: wrap;
+
+  @media (min-width: 600px) {
+    gap: 3rem;
+  }
 }
 
 #overview {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 2rem;
   margin: 4rem 0;
+
+  @media (min-width: 600px) {
+    gap: 3rem;
+  }
 
   .overview--title {
     flex: 100%;
@@ -175,8 +188,15 @@ body {
   }
 
   .card {
-    flex: 20%;
+    flex: 100%;
     padding: 2rem;
+
+    @media (min-width: 600px) {
+      flex: 40%;
+    }
+    @media (min-width: 1200px) {
+      flex: 20%;
+    }
     
     &--foot {
       align-self: flex-end;
@@ -191,7 +211,7 @@ body {
 
 .card {
   position: relative;
-  flex: 1;
+  flex: 100%;
 
   padding: 3rem;
   text-align: center;
@@ -199,6 +219,14 @@ body {
   background: var(--cp-cardBg);
   border-radius: .5rem;
   overflow: hidden;
+
+  @media (min-width: 600px) {
+    flex: 40%;
+  }
+  @media (min-width: 1200px) {
+    flex: 1;
+  }
+
 
   &::before {
     content: "";

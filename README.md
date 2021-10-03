@@ -22,9 +22,10 @@ This is a solution to the [Social media dashboard with theme switcher challenge 
 - Build out the project to the designs provided
 
 ### Screenshot
-
-![Social Media Dashboard -- Dekstop](./screenshot/social-media--desktop.png)
-![Social Media Dashboard -- Mobile](./screenshot/social-media--mobile.png)
+#### Desktop
+![Social Media Dashboard -- Dekstop](./screenshot/social-media__desktop--dark.png) | ![Social Media Dashboard -- Dekstop](./screenshot/social-media__desktop--dark.png)
+#### Mobile
+![Social Media Dashboard -- Mobile](./screenshot/social-media__mobile--dark.png)
 
 ### Links
 

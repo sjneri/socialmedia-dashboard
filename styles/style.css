@@ -22,21 +22,16 @@ html {
   font-size: 62.5%;
 }
 
-@media only screen and (max-width: 40rem) {
-  html {
-    font-size: 50%;
-  }
-}
-
 body {
   font-family: 'Inter', sans-serif;
   font-size: 1.4rem;
   font-weight: 400;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  height: 100vh;
   line-height: 1.4;
   letter-spacing: 0.5px;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, var(--cp-topBg)), color-stop(10%, var(--cp-mainBg)), to(var(--cp-mainBg)));
+  background: linear-gradient(to bottom, var(--cp-topBg) 10%, var(--cp-mainBg) 10%, var(--cp-mainBg) 100%);
   color: var(--cp-title);
 }
 
@@ -58,12 +53,27 @@ body[data-theme="light"] {
   --cp-theme: hsl(230, 22%, 74%);
 }
 
+@media (min-width: 768px) {
+  body {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, var(--cp-topBg)), color-stop(30%, var(--cp-mainBg)), to(var(--cp-mainBg)));
+    background: linear-gradient(to bottom, var(--cp-topBg) 30%, var(--cp-mainBg) 30%, var(--cp-mainBg) 100%);
+  }
+}
+
 .container {
-  height: 100%;
-  width: 100%;
-  margin: 0 auto;
-  padding: 5rem 15rem;
-  background: var(--cp-mainBg);
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding: 4rem 10rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 4rem 15rem;
+  }
 }
 
 #header {
@@ -154,8 +164,16 @@ body[data-theme="light"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   margin: 4rem 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media (min-width: 600px) {
+  #social {
+    gap: 3rem;
+  }
 }
 
 #overview {
@@ -164,8 +182,14 @@ body[data-theme="light"] {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  gap: 3rem;
+  gap: 2rem;
   margin: 4rem 0;
+}
+
+@media (min-width: 600px) {
+  #overview {
+    gap: 3rem;
+  }
 }
 
 #overview .overview--title {
@@ -176,10 +200,26 @@ body[data-theme="light"] {
 }
 
 #overview .card {
-  -webkit-box-flex: 20%;
-      -ms-flex: 20%;
-          flex: 20%;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
   padding: 2rem;
+}
+
+@media (min-width: 600px) {
+  #overview .card {
+    -webkit-box-flex: 40%;
+        -ms-flex: 40%;
+            flex: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  #overview .card {
+    -webkit-box-flex: 20%;
+        -ms-flex: 20%;
+            flex: 20%;
+  }
 }
 
 #overview .card--foot {
@@ -194,14 +234,30 @@ body[data-theme="light"] {
 
 .card {
   position: relative;
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
   padding: 3rem;
   text-align: center;
   background: var(--cp-cardBg);
   border-radius: .5rem;
   overflow: hidden;
+}
+
+@media (min-width: 600px) {
+  .card {
+    -webkit-box-flex: 40%;
+        -ms-flex: 40%;
+            flex: 40%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
 }
 
 .card::before {
