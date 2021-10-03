@@ -16,16 +16,6 @@ $cs-youtube: hsl(348, 97%, 39%);
 $font-lg: 2.0rem;
 $font-md: 1.4rem;
 $font-sm: 1.2rem;
-
-:root {
-  --cp-mainBg: hsl(230, 17%, 14%);
-  --cp-topBg: hsl(232, 19%, 15%);
-  --cp-cardBg: hsl(228, 28%, 20%);
-  --cp-title: hsl(0, 0%, 100%);
-  --cp-subtitle: hsl(228, 34%, 66%);
-  --cp-theme: linear-gradient(to right, hsl(210, 78%, 56%),hsl(146, 68%, 55%));
-}
-
 /*====================
     END VARIABLES
 ====================*/
@@ -62,7 +52,16 @@ body {
   line-height: 1.4;
   letter-spacing: 0.5px;
 
-  &.light-mode {
+  &[data-theme="dark"] {
+    --cp-mainBg: hsl(230, 17%, 14%);
+    --cp-topBg: hsl(232, 19%, 15%);
+    --cp-cardBg: hsl(228, 28%, 20%);
+    --cp-title: hsl(0, 0%, 100%);
+    --cp-subtitle: hsl(228, 34%, 66%);
+    --cp-theme: linear-gradient(to right, hsl(210, 78%, 56%),hsl(146, 68%, 55%));
+  }
+
+  &[data-theme="light"] {
     --cp-mainBg: hsl(0, 0%, 100%);
     --cp-topBg: hsl(225, 100%, 98%);
     --cp-cardBg: hsl(227, 47%, 96%);

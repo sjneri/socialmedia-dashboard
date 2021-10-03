@@ -1,22 +1,13 @@
 /*====================
     VARIABLES
 ====================*/
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
-:root {
-  --cp-mainBg: hsl(230, 17%, 14%);
-  --cp-topBg: hsl(232, 19%, 15%);
-  --cp-cardBg: hsl(228, 28%, 20%);
-  --cp-title: hsl(0, 0%, 100%);
-  --cp-subtitle: hsl(228, 34%, 66%);
-  --cp-theme: linear-gradient(to right, hsl(210, 78%, 56%),hsl(146, 68%, 55%));
-}
-
 /*====================
     END VARIABLES
 ====================*/
 /*====================
     STYLES
 ====================*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
 /* Reset */
 *,
 *::before,
@@ -49,7 +40,16 @@ body {
   color: var(--cp-title);
 }
 
-body.light-mode {
+body[data-theme="dark"] {
+  --cp-mainBg: hsl(230, 17%, 14%);
+  --cp-topBg: hsl(232, 19%, 15%);
+  --cp-cardBg: hsl(228, 28%, 20%);
+  --cp-title: hsl(0, 0%, 100%);
+  --cp-subtitle: hsl(228, 34%, 66%);
+  --cp-theme: linear-gradient(to right, hsl(210, 78%, 56%),hsl(146, 68%, 55%));
+}
+
+body[data-theme="light"] {
   --cp-mainBg: hsl(0, 0%, 100%);
   --cp-topBg: hsl(225, 100%, 98%);
   --cp-cardBg: hsl(227, 47%, 96%);

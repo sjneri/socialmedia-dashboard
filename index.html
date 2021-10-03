@@ -9,7 +9,7 @@
   <title>Frontend Mentor | Social Media Dashboard</title>
   <link rel="stylesheet" href="styles/style.css">
 </head>
-<body>
+<body data-theme="dark">
   <div class="container">
     <section id="header">
       <div class="header">
@@ -178,7 +178,7 @@
     let toggle = document.getElementById("toggle");
 
     $(toggle).click(() => {
-      $(element).toggleClass("light-mode");
+      $(element).attr('data-theme', (_, attr) => attr == 'dark' ? 'light' : 'dark');
     });
   </script>
 </body>
