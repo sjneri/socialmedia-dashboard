@@ -76,6 +76,13 @@ body[data-theme="light"] {
   }
 }
 
+@media (min-width: 1920px) {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
 #header {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -84,6 +84,11 @@ body {
   @media (min-width: 1024px) {
     padding: 4rem 15rem;
   }
+
+  @media (min-width: 1920px) {
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 #header {
   display: flex;
