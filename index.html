@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Social Media Dashboard</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <div class="container">
+    <section id="header">
+      <div class="header">
+        <h1 class="header__title">Social Media Dashboard</h1>
+        <p class="header__followers">Total Followers: 23,004</p>
+      </div>
+      <label for="toggle" id="toggleContainer" class="toggle__switch">
+        <input type="checkbox" id="toggle" class="toggle__switch--checkbox" checked>
+        <div class="toggle__button"></div>
+      </label>
+    </section>
+
+    <section id="social">
+      <!-- Facebook -->
+      <div class="card facebook">
+        <div class="card__user">
+          <img src="/images/icon-facebook.svg" class="card__user--img" alt="Facebook">
+          <p class="card__user--title">@nathanf</p>
+        </div>
+        <div class="card__stat">
+          <h2 class="card__stat--title">1987</h2>
+          <p class="card__stat--subtitle">Followers</p>
+        </div>
+        <p class="card--foot up">12 Today</p>
+      </div>
+
+      <!-- Twitter -->
+      <div class="card twitter">
+        <div class="card__user">
+          <img src="/images/icon-twitter.svg" class="card__user--img" alt="Twitter">
+          <p class="card__user--title">@nathanf</p>
+        </div>
+        <div class="card__stat">
+          <h2 class="card__stat--title">1044</h2>
+          <p class="card__stat--subtitle">Followers</p>
+        </div>
+        <p class="card--foot up">99 Today</p>
+      </div>
+
+      <!-- Instagram -->
+      <div class="card instagram">
+        <div class="card__user">
+          <img src="/images/icon-instagram.svg" class="card__user--img" alt="Instagram">
+          <p class="card__user--title">@realnathanf</p>
+        </div>
+        <div class="card__stat">
+          <h2 class="card__stat--title">11k</h2>
+          <p class="card__stat--subtitle">Followers</p>
+        </div>
+        <p class="card--foot up">1099 Today</p>
+      </div>
+
+      <!-- Youtube -->
+      <div class="card youtube">
+        <div class="card__user">
+          <img src="/images/icon-youtube.svg" class="card__user--img" alt="Youtube">
+          <p class="card__user--title">Nathan F.</p>
+        </div>
+        <div class="card__stat">
+          <h2 class="card__stat--title">8239</h2>
+          <p class="card__stat--subtitle">Subscribers</p>
+        </div>
+        <p class="card--foot down">144 Today</p>
+      </div>
+    </section>
+
+    <section id="overview">
+      <h3 class="overview--title">Overview - Today</h3>
+      <!-- Facebook -->
+      <div class="card">
+        <div class="card__header">
+          <p class="card__header--title">Page Views</p>
+          <img src="/images/icon-facebook.svg" alt="Facebook">
+        </div>
+        <div class="card__details">
+          <h4 class="card__details--title">87</h4>
+          <p class="card--foot up">3</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__header">
+          <p class="card__header--title">Likes</p>
+          <img src="/images/icon-facebook.svg" alt="Facebook">
+        </div>
+        <div class="card__details">
+          <h4 class="card__details--title">52</h4>
+          <p class="card--foot down">2</p>
+        </div>
+      </div>
+      <!-- Facebook -->
+
+      <!-- Instagram -->
+      <div class="card">
+        <div class="card__header">
+          <p class="card__header--title">Likes</p>
+          <img src="/images/icon-instagram.svg" alt="Instagram">
+        </div>
+        <div class="card__details">
+          <h4 class="card__details--title">5462</h4>
+          <p class="card--foot up">2257</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__header">
+          <p class="card__header--title">Profile Views</p>
+          <img src="/images/icon-instagram.svg" alt="Instagram">
+        </div>
+        <div class="card__details">
+          <h4 class="card__details--title">52k</h4>
+          <p class="card--foot up">1375</p>
+        </div>
+      </div>
+      <!-- Instagram -->
+
+      <!-- Twitter -->
+      <div class="card">
+        <div class="card__header">
+          <p class="card__header--title">Retweets</p>
+          <img src="/images/icon-twitter.svg" alt="Twitter">
+        </div>
+        <div class="card__details">
+          <h4 class="card__details--title">117</h4>
+          <p class="card--foot up">303</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__header">
+          <p class="card__header--title">Likes</p>
+          <img src="/images/icon-twitter.svg" alt="Twitter">
+        </div>
+        <div class="card__details">
+          <h4 class="card__details--title">507</h4>
+          <p class="card--foot up">553</p>
+        </div>
+      </div>
+      <!-- Twitter -->
+
+      <!-- Youtube -->
+      <div class="card">
+        <div class="card__header">
+          <p class="card__header--title">Likes</p>
+          <img src="/images/icon-youtube.svg" alt="Youtube">
+        </div>
+        <div class="card__details">
+          <h4 class="card__details--title">107</h4>
+          <p class="card--foot down">19</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__header">
+          <p class="card__header--title">Total Views</p>
+          <img src="/images/icon-youtube.svg" alt="Youtube">
+        </div>
+        <div class="card__details">
+          <h4 class="card__details--title">1407</h4>
+          <p class="card--foot down">12</p>
+        </div>
+      </div>
+      <!-- Youtube -->
+    </section>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    let element = document.body;
+    let toggle = document.getElementById("toggle");
+
+    $(toggle).click(() => {
+      $(element).toggleClass("light-mode");
+    });
+  </script>
+</body>
+</html>

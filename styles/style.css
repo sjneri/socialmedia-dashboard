@@ -1,0 +1,330 @@
+/*====================
+    VARIABLES
+====================*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+:root {
+  --cp-mainBg: hsl(230, 17%, 14%);
+  --cp-topBg: hsl(232, 19%, 15%);
+  --cp-cardBg: hsl(228, 28%, 20%);
+  --cp-title: hsl(0, 0%, 100%);
+  --cp-subtitle: hsl(228, 34%, 66%);
+  --cp-theme: linear-gradient(to right, hsl(210, 78%, 56%),hsl(146, 68%, 55%));
+}
+
+/*====================
+    END VARIABLES
+====================*/
+/*====================
+    STYLES
+====================*/
+/* Reset */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+@media only screen and (max-width: 40rem) {
+  html {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 100vh;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  color: var(--cp-title);
+}
+
+body.light-mode {
+  --cp-mainBg: hsl(0, 0%, 100%);
+  --cp-topBg: hsl(225, 100%, 98%);
+  --cp-cardBg: hsl(227, 47%, 96%);
+  --cp-title: hsl(230, 17%, 14%);
+  --cp-subtitle: hsl(228, 12%, 44%);
+  --cp-theme: hsl(230, 22%, 74%);
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 5rem 15rem;
+  background: var(--cp-mainBg);
+}
+
+#header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.header__title {
+  font-size: 2.4rem;
+}
+
+.header__followers {
+  font-weight: 700;
+  color: var(--cp-subtitle);
+}
+
+.toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.toggle__switch {
+  display: inline-block;
+  padding: 0 3px;
+  width: 5rem;
+  height: 2.6rem;
+  border-radius: 10rem;
+  position: relative;
+  cursor: pointer;
+  background: var(--cp-theme);
+  margin-left: 1.2rem;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.toggle__switch::before {
+  content: "Dark mode";
+  position: absolute;
+  left: -90px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  font-weight: 700;
+  color: var(--cp-subtitle);
+}
+
+.toggle__switch:hover {
+  opacity: 0.8;
+}
+
+.toggle__switch--checkbox {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+}
+
+.toggle__switch--checkbox + .toggle__button::before {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  background: var(--cp-topBg);
+  border-radius: 50%;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+  margin-left: 2.35rem;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.toggle__switch--checkbox:checked + .toggle__button::before {
+  margin-left: 0;
+}
+
+#social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 3rem;
+  margin: 4rem 0;
+}
+
+#overview {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 3rem;
+  margin: 4rem 0;
+}
+
+#overview .overview--title {
+  -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+          flex: 100%;
+  font-size: 2.4rem;
+}
+
+#overview .card {
+  -webkit-box-flex: 20%;
+      -ms-flex: 20%;
+          flex: 20%;
+  padding: 2rem;
+}
+
+#overview .card--foot {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 5px;
+}
+
+#overview .card--foot::after {
+  content: "%";
+}
+
+.card {
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 3rem;
+  text-align: center;
+  background: var(--cp-cardBg);
+  border-radius: .5rem;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 5px;
+  width: 100%;
+  left: 0;
+}
+
+.card.facebook::before {
+  background: #198ff5;
+}
+
+.card.twitter::before {
+  background: #1ca0f2;
+}
+
+.card.instagram::before {
+  background: -webkit-gradient(linear, left top, right top, from(#fdc468), to(#df4996));
+  background: linear-gradient(to right, #fdc468, #df4996);
+}
+
+.card.youtube::before {
+  background: #c4032a;
+}
+
+.card__user {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  font-size: 1.2rem;
+  color: var(--cp-subtitle);
+}
+
+.card__stat {
+  margin: 2rem 0;
+}
+
+.card__stat--title {
+  font-size: 5rem;
+  line-height: 1.2;
+}
+
+.card__stat--subtitle {
+  font-size: 1.2rem;
+  color: var(--cp-subtitle);
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+}
+
+.card--foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card__header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card__header--title {
+  font-weight: 700;
+  color: var(--cp-subtitle);
+}
+
+.card__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.card__details--title {
+  font-size: 2.8rem;
+}
+
+.up::before, .down::before {
+  content: "";
+  width: 0;
+  height: 0;
+  margin-right: 6px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+}
+
+.up {
+  color: #1db489;
+}
+
+.up::before {
+  border-bottom: 5px solid currentColor;
+}
+
+.down {
+  color: #dc414c;
+}
+
+.down::before {
+  border-top: 5px solid currentColor;
+}
+/*# sourceMappingURL=style.css.map */
